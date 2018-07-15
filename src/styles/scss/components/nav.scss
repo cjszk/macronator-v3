@@ -1,0 +1,33 @@
+.navigation {
+    width: 100%;
+    border-bottom: 1px solid $color-two;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem;
+
+    &__title {
+        font-size: 3rem;
+        display: inline-block;
+    }
+
+    &__ul {
+        list-style: none;
+        
+    }
+
+    &__li {
+        display: inline-block;
+        font-size: 2rem;
+        margin: .5rem 2rem;
+
+        &__button {
+            color: $color-font;
+
+            &:hover {
+                cursor: pointer;
+                text-decoration: underline;
+            }
+        }
+    }
+}

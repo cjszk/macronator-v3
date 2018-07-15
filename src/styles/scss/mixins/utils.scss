@@ -1,0 +1,19 @@
+.phone-hide {
+    @include respond(phone-land) {
+        position: fixed !important;
+        left: 0;
+        top: 0;
+        visibility: hidden;
+    }
+    @include respond(large-phone) {
+        position: fixed !important;
+        left: 0;
+        top: 0;
+        visibility: hidden;
+    }
+
+}
+
+.hide-text {
+    visibility: hidden;
+}

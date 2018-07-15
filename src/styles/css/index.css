@@ -1,0 +1,284 @@
+@media (max-width: 60em) and (max-height: 40em) {
+  .phone-hide {
+    position: fixed !important;
+    left: 0;
+    top: 0;
+    visibility: hidden; } }
+
+@media (max-width: 45em) {
+  .phone-hide {
+    position: fixed !important;
+    left: 0;
+    top: 0;
+    visibility: hidden; } }
+
+.hide-text {
+  visibility: hidden; }
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit; }
+
+a {
+  text-decoration: none; }
+
+html {
+  font-size: 62.5%; }
+  @media (max-width: 112.5em) {
+    html {
+      font-size: 62.5%; } }
+  @media (max-width: 85.375em) {
+    html {
+      font-size: 50%; } }
+  @media (max-width: 60em) {
+    html {
+      font-size: 50%; } }
+  @media (max-width: 40em) {
+    html {
+      font-size: 37.5%; } }
+
+body {
+  box-sizing: border-box;
+  padding: 0rem;
+  background-color: #000000;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  color: #ccc; }
+
+button {
+  cursor: pointer; }
+
+li {
+  list-style: none; }
+
+svg {
+  color: #ccc; }
+  @media (max-width: 25em) {
+    svg {
+      width: .7rem; } }
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8));
+  width: 100%;
+  height: 100%;
+  padding: 1px; }
+
+.form-error {
+  display: block;
+  position: relative;
+  font-size: 1.5rem;
+  color: #B82601; }
+
+.logging-in {
+  font-size: 5rem;
+  text-align: center;
+  vertical-align: center; }
+
+.navigation {
+  width: 100%;
+  border-bottom: 1px solid #062F4F;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1rem; }
+  .navigation__title {
+    font-size: 3rem;
+    display: inline-block; }
+  .navigation__ul {
+    list-style: none; }
+  .navigation__li {
+    display: inline-block;
+    font-size: 2rem;
+    margin: .5rem 2rem; }
+    .navigation__li__button {
+      color: #ccc; }
+      .navigation__li__button:hover {
+        cursor: pointer;
+        text-decoration: underline; }
+
+.dashboard__content {
+  width: 100%;
+  margin: 10rem auto;
+  display: flex; }
+  .dashboard__content__left {
+    margin: 1rem;
+    width: 30%;
+    height: 60rem;
+    border: 1px solid white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; }
+  .dashboard__content__right {
+    margin: 1rem;
+    width: 70%;
+    height: 60rem;
+    border: 1px solid white; }
+
+.basic-info {
+  font-size: 2.5rem; }
+  .basic-info__ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 20rem;
+    border: 1px solid white; }
+  .basic-info__goal {
+    margin: 0 auto; }
+    .basic-info__goal__label {
+      display: inline-block;
+      padding: 1rem; }
+    .basic-info__goal__info {
+      display: inline-block;
+      padding: 1rem; }
+  .basic-info__tdee {
+    margin: 0 auto; }
+    .basic-info__tdee__label {
+      display: inline-block;
+      padding: 1rem; }
+    .basic-info__tdee__info {
+      display: inline-block;
+      padding: 1rem; }
+  .basic-info__recommended {
+    margin: 0 auto; }
+
+.quick-add {
+  border: 1px solid white;
+  padding: 1rem; }
+  .quick-add__header {
+    font-size: 2rem; }
+  .quick-add__form {
+    padding: 1rem; }
+  .quick-add__label {
+    display: block;
+    padding: 1rem;
+    font-size: 2rem; }
+  .quick-add__date {
+    font-size: 2rem; }
+  .quick-add__input {
+    font-size: 2rem; }
+  .quick-add__button {
+    font-size: 2rem; }
+
+.data-entries {
+  height: 90vh; }
+  .data-entries__toggle {
+    font-size: 2rem; }
+    .data-entries__toggle:hover {
+      cursor: pointer; }
+  .data-entries__left {
+    display: inline-block;
+    width: 70%;
+    border: 1px solid white;
+    vertical-align: top; }
+  .data-entries__right {
+    display: inline-block;
+    width: 30%;
+    border: 1px solid white;
+    vertical-align: top;
+    margin-top: 20rem;
+    padding: 3rem 5rem; }
+  .data-entries__selected__header {
+    font-size: 2.5rem;
+    margin-bottom: 2rem; }
+  .data-entries__selected__ul {
+    font-size: 2rem;
+    line-height: 1.5;
+    margin-left: 2rem; }
+  .data-entries__selected__edit {
+    font-size: 1.75rem;
+    display: inline-block;
+    padding: 2rem;
+    border: 1px solid white;
+    width: 45%;
+    text-align: center;
+    margin: 1rem .5rem; }
+    .data-entries__selected__edit:hover {
+      cursor: pointer; }
+  .data-entries__selected__delete {
+    font-size: 1.75rem;
+    display: inline-block;
+    padding: 2rem;
+    border: 1px solid white;
+    width: 45%;
+    text-align: center;
+    margin: 1rem .5rem; }
+    .data-entries__selected__delete:hover {
+      cursor: pointer; }
+  .data-entries__selected__add-new {
+    font-size: 1.75rem;
+    display: inline-block;
+    padding: 2rem;
+    border: 1px solid white;
+    width: 90%;
+    margin: 2rem auto;
+    text-align: center; }
+    .data-entries__selected__add-new:hover {
+      cursor: pointer; }
+
+.calendar {
+  padding: 1rem;
+  text-align: center; }
+  .calendar__header-row {
+    padding: 1rem; }
+    .calendar__header-row__header {
+      display: inline-block;
+      font-size: 2.5rem;
+      min-width: 20%;
+      max-width: 20%; }
+    .calendar__header-row__button {
+      display: inline-block;
+      text-align: center; }
+      .calendar__header-row__button img {
+        width: 50%; }
+        .calendar__header-row__button img:hover {
+          cursor: pointer; }
+  .calendar__days__day {
+    box-sizing: border-box;
+    padding: 1rem;
+    display: inline-block;
+    width: 13%;
+    border: 1px solid white; }
+  .calendar__block {
+    box-sizing: border-box;
+    padding: 1rem;
+    display: inline-block;
+    width: 13%;
+    min-height: 10rem;
+    max-height: 10rem;
+    border: 1px solid white;
+    text-align: left;
+    font-size: 1.5rem; }
+    .calendar__block:hover {
+      cursor: pointer; }
+    .calendar__block__day {
+      font-size: 2rem; }
+    .calendar__block__calories {
+      color: #813772; }
+    .calendar__block__weight {
+      color: #813772; }
+
+.list-view__ul {
+  overflow-y: auto;
+  max-height: 90vh; }
+
+.list-view__data {
+  font-size: 2rem;
+  display: flex;
+  flex-direction: row;
+  padding: .5rem 1rem; }
+  .list-view__data:hover {
+    background-color: #062F4F;
+    cursor: pointer; }
+  .list-view__data__date {
+    margin-left: 5rem;
+    width: 33%; }
+  .list-view__data__calories {
+    width: 33%;
+    text-align: center; }
+  .list-view__data__weight {
+    width: 33%;
+    text-align: center; }

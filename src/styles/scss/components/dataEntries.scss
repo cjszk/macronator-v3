@@ -1,0 +1,208 @@
+
+.data-entries {
+    height: 90vh;
+
+    &__toggle {
+        font-size: 2rem;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    &__left {
+        display: inline-block;
+        width: 70%;
+        border: 1px solid white;
+        vertical-align: top;
+
+    }
+
+    &__right {
+        display: inline-block;
+        width: 30%;
+        border: 1px solid white;
+        vertical-align: top;
+        margin-top: 20rem;
+        padding: 3rem 5rem;
+
+    }
+
+    &__selected {
+
+        &__header {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+
+        &__ul {
+            font-size: 2rem;
+            line-height: 1.5;            
+            margin-left: 2rem;
+        }
+
+        &__date {
+
+        }
+
+        &__calories {
+
+        }
+
+        &__weight {
+
+        }
+
+        &__edit {
+            font-size: 1.75rem;
+            display: inline-block;
+            padding: 2rem;
+            border: 1px solid white;
+            width: 45%;
+            text-align: center;
+            margin: 1rem .5rem;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        &__delete {
+            font-size: 1.75rem;
+            display: inline-block;
+            padding: 2rem;
+            border: 1px solid white;
+            width: 45%;
+            text-align: center;
+            margin: 1rem .5rem;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        &__add-new {
+            font-size: 1.75rem;
+            display: inline-block;
+            padding: 2rem;
+            border: 1px solid white;
+            width: 90%;
+            margin: 2rem auto;
+            text-align: center;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.calendar {
+    padding: 1rem;
+    text-align: center;
+
+    &__header-row {
+        padding: 1rem;
+
+        &__header {
+            display: inline-block;
+            font-size: 2.5rem;
+            min-width: 20%;
+            max-width: 20%;
+        }
+
+        &__button {
+            display: inline-block;
+            text-align: center;
+
+            & img {
+                width: 50%;
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+
+
+        }
+    }
+
+    &__days {
+        
+        &__day {
+            box-sizing: border-box;
+            padding: 1rem;
+            display: inline-block;
+            width: 13%;
+            border: 1px solid white;
+        }
+    }
+
+    &__blocks-row {
+        
+    }
+
+    &__block {
+        box-sizing: border-box;
+        padding: 1rem;
+        display: inline-block;
+        width: 13%;
+        min-height: 10rem;
+        max-height: 10rem;
+        border: 1px solid white;
+        text-align: left;
+        font-size: 1.5rem;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        &__day {
+            font-size: 2rem;
+        }
+
+        &__calories {
+            color: $color-three;
+        }
+
+        &__weight {
+            color: $color-three;
+        }
+    }
+}
+
+.list-view {
+
+    &__ul {
+        overflow-y: auto;
+        max-height: 90vh;
+    }
+
+    &__data {
+        font-size: 2rem;
+        display: flex;
+        flex-direction: row;
+        padding: .5rem 1rem;
+
+        &:hover {
+            background-color: $color-two;
+            cursor: pointer;
+        }
+
+        &__date {
+            margin-left: 5rem;
+            width: 33%;
+        }
+
+        &__calories {
+            width: 33%;
+            text-align: center;
+
+        }
+
+        &__weight {
+            width: 33%;
+            text-align: center;
+
+        }
+    }
+}
