@@ -1,0 +1,113 @@
+.login {
+    display: flex;
+}
+
+.login-form {
+    font-size: 2.2rem;
+    display: inline-block;
+    margin: 2rem auto;
+    padding: 10rem;
+    font-family: 'Roboto', sans-serif;
+    color: $color-grey-light-1;
+    // float: right;
+
+    &__message {
+        color: red;
+        font-size: 2rem;
+    }
+
+    &__input {
+        font-size: 1.9rem;
+        font-family: inherit;
+        padding: 1.5rem 3rem;
+        border-radius: 5px;
+        // background-color: rgba($color-white, .5);
+        border: 1px solid $color-grey-light-1;
+        // border-bottom: 1px solid #D6EAF8;
+        display: block;
+        transition: all .3s;
+        width: 100%;        
+
+        &:focus {
+            outline: none;
+        }
+
+        &:focus:invalid {
+            border-color: #a33;
+        }
+
+        &::-webkit-input-placeholder {
+            color: $color-four;
+        }
+    }
+
+    &__label {
+        font-size: 2rem;
+        font-weight: 700;
+        padding-left: 2rem;
+        padding-top: 1.5rem;
+        display: block;
+    }
+    //This should only be used at the end.
+// Sibling selector + selects the next immediate sibling element.
+    &__input:placeholder-shown + &__label {
+        opacity: 0;
+        visibility: hidden;
+        transition: all .3s;
+        transform: translateY(-4rem);
+    }
+
+    &__button {
+        //See buttons.scss
+    }
+
+    &__form {
+        & > div > label {
+            display: block;
+            position: relative;
+            margin-bottom: 2rem;
+        }
+    }
+}
+
+.form-error{
+    color: red;
+    font-size: 1.2rem;
+    margin-left: 2rem;
+    position: absolute;
+}
+
+.register {
+    display: flex;
+    margin: 0 auto;
+    
+    &__parent {
+        display: flex;
+    }
+
+    &__header {
+        font-size: 3rem;
+    }
+
+    &__back-button {
+        display: inline-block;
+        font-size: 2rem;
+    }
+
+    &__back-button svg {
+        float: left;
+        margin-right: 1rem;
+        transform: scale(1.5)
+    }
+
+    &__p {
+        font-size: 2.2rem;
+        font-family: 'Roboto', sans-serif;
+        transform: translateY(-17.5%);
+        
+    }
+}
+
+.register-line {
+    margin-top: 4rem;
+}

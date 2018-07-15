@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import { Route, withRouter } from 'react-router-dom';
 import Navigation from './components/nav';
-import LandingNavigation from './components/landing-page-nav';
+import LandingNavigation from './components/landing-page/landing-page-nav';
 import Login from './components/login';
 import RegistrationPage from './components/registration-page';
 import Dashboard from './components/dashboard/dashboard';
 import DataEntries from './components/dataEntries/dataEntries';
+import Settings from './components/settings/settings';
 
 class App extends Component {
   render() {
@@ -24,6 +25,7 @@ class App extends Component {
         <Route exact path="/registration" component={RegistrationPage} />
         <Route exact path="/dashboard" component={Dashboard} />
         <Route exact path="/data-entries" component={DataEntries} />
+        <Route exact path="/settings" component={Settings} />
 
 
       </div>

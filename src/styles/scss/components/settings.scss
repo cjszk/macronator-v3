@@ -1,0 +1,74 @@
+.settings {
+    background: url('../images/dashboard-background.png');
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    &__overlay {
+        background-image: linear-gradient(to right, rgba($color-one, .6), rgba($color-one, .6));
+        height: 100vh;
+        width: 100vw;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+    &__left {
+        height: 50vh;
+        margin: 20rem 10rem;
+        width: 30%;
+        padding: 5rem;
+        font-size: 2rem;
+        border: 1px solid $color-two;
+        border-radius: 1rem;
+    }
+    
+    &__options {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
+        &__item {
+            padding: 1rem;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        &__button {
+            font-size: 1.75rem;
+            display: inline-block;
+            padding: 2rem;
+            border: 1px solid $color-two;
+            width: 100%;
+            text-align: center;
+            margin: 1rem .5rem;
+            border-radius: 1rem;
+            background: none;
+            color: $color-font;
+
+            &:hover {
+                cursor: pointer;
+                background-image: linear-gradient(to right, rgba($color-two, .3), rgba($color-two, .3));
+                color: $color-two;
+            }
+
+            &__selected {
+                background: $color-two;
+
+                &:hover {
+                    cursor: pointer;
+                    color: $color-font;
+                }
+            }
+        }
+    }
+
+    &__right {
+
+    }
+}

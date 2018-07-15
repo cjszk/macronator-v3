@@ -1,4 +1,20 @@
 .dashboard {
+    background: url('../images/dashboard-background.png');
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    &__overlay {
+        background-image: linear-gradient(to right, rgba($color-one, .6), rgba($color-one, .6));
+        height: 100vh;
+        width: 100vw;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
 
     &__content {
         width: 100%;
@@ -6,34 +22,51 @@
         display: flex;
 
         &__left {
-            margin: 1rem;
+            margin: 1rem 0rem 1rem 5rem;
             width: 30%;
             height: 60rem;
-            border: 1px solid white;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
         }
     
         &__right {
-            margin: 1rem;
+            margin: 1rem 10rem 1rem 0rem;
             width: 70%;
             height: 60rem;
-            border: 1px solid white;
+            border: 2px solid $color-two;
+            border-radius: 1rem;
+
+            &__graph-container {
+                margin-top: 5rem;
+            }
+
+            &__graph-input {
+                font-size: 2rem;
+                width: 5rem;
+                margin: 1rem;
+
+                &__label {
+                    font-size: 2rem;
+                    margin: 5rem 2rem 5rem 10rem;
+                }
+            }
         }
     }
 }
 
 .basic-info {
     font-size: 2.5rem;
-    
+    border: 2px solid $color-two;
+    border-radius: 1rem;
+    margin: 0 auto;
+
     &__ul {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
         height: 20rem;
 
-        border: 1px solid white;
     }
 
     &__goal {
@@ -71,8 +104,10 @@
 }
 
 .quick-add {
-    border: 1px solid white;
-        padding: 1rem;
+    padding: 1rem;
+    margin: 0 auto;
+    border: 2px solid $color-two;
+    border-radius: 1rem;
 
     &__header {
         font-size: 2rem;
@@ -97,6 +132,46 @@
     }
 
     &__button {
-        font-size: 2rem;
+        // display: inline-block;
+        // padding: 1rem 1.5rem;
+        // font-size: 1.5rem;
+        // margin: 1rem 2rem;
+
+        border-radius: 1rem;
+        font-size: 1.75rem;
+        display: inline-block;
+        padding: 2rem;
+        border: 1px solid $color-two;
+        width: 100%;
+        margin: 2rem auto;
+        text-align: center;
+        background: none;
+        
+        &:hover {
+            cursor: pointer;
+            background-image: linear-gradient(to right, rgba($color-two, .3), rgba($color-two, .3));
+            color: $color-two;
+        }
     }
+}
+
+.chart {
+
+    &__header {
+        font-size: 3rem;
+        text-align: center;
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    &__tooltip {
+        background-color: $color-one;
+    }
+}
+
+
+
+.recharts-default-tooltip {
+    background-color: $color-one !important;
+    font-size: 1.5rem !important; 
 }

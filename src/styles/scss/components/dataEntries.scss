@@ -1,31 +1,55 @@
 
 .data-entries {
-    height: 90vh;
+    background: url('../images/dashboard-background.png');
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    &__overlay {
+        background-image: linear-gradient(to right, rgba($color-one, .6), rgba($color-one, .6));
+        height: 100vh;
+        width: 100vw;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
 
     &__toggle {
-        font-size: 2rem;
+        font-size: 1.75rem;
+        display: inline-block;
+        padding: 2rem;
+        border: 1px solid $color-two;
+        width: 20%;
+        text-align: center;
+        margin: 1rem 0rem 1rem 10rem;
+        border-radius: 1rem;
 
         &:hover {
             cursor: pointer;
+            background-image: linear-gradient(to right, rgba($color-two, .3), rgba($color-two, .3));
+            color: $color-two;
         }
     }
 
     &__left {
         display: inline-block;
         width: 70%;
-        border: 1px solid white;
         vertical-align: top;
-
+        padding-top: 10rem;
+        
     }
 
     &__right {
         display: inline-block;
         width: 30%;
-        border: 1px solid white;
         vertical-align: top;
         margin-top: 20rem;
         padding: 3rem 5rem;
-
+        border: 1px solid $color-two;
+        border-radius: 1rem;
     }
 
     &__selected {
@@ -53,31 +77,20 @@
 
         }
 
-        &__edit {
-            font-size: 1.75rem;
-            display: inline-block;
-            padding: 2rem;
-            border: 1px solid white;
-            width: 45%;
-            text-align: center;
-            margin: 1rem .5rem;
-
-            &:hover {
-                cursor: pointer;
-            }
-        }
-
         &__delete {
             font-size: 1.75rem;
             display: inline-block;
             padding: 2rem;
-            border: 1px solid white;
-            width: 45%;
+            border: 1px solid $color-two;
+            width: 90%;
             text-align: center;
             margin: 1rem .5rem;
+            border-radius: 1rem;
 
             &:hover {
                 cursor: pointer;
+                background-image: linear-gradient(to right, rgba($color-two, .3), rgba($color-two, .3));
+                color: $color-two;
             }
         }
 
@@ -85,13 +98,16 @@
             font-size: 1.75rem;
             display: inline-block;
             padding: 2rem;
-            border: 1px solid white;
+            border: 1px solid $color-two;
             width: 90%;
             margin: 2rem auto;
             text-align: center;
+            border-radius: 1rem;
 
             &:hover {
                 cursor: pointer;
+                background-image: linear-gradient(to right, rgba($color-two, .3), rgba($color-two, .3));
+                color: $color-two;
             }
         }
     }
@@ -109,6 +125,8 @@
             font-size: 2.5rem;
             min-width: 20%;
             max-width: 20%;
+            padding: 1rem;
+            vertical-align: top;
         }
 
         &__button {
@@ -117,8 +135,12 @@
 
             & img {
                 width: 50%;
+                border-radius: 3rem;
+                padding: 1rem;
+
                 &:hover {
                     cursor: pointer;
+                    background-image: linear-gradient(to right, rgba($color-two, .6), rgba($color-two, .6));
                 }
             }
 
@@ -133,7 +155,7 @@
             padding: 1rem;
             display: inline-block;
             width: 13%;
-            border: 1px solid white;
+            border: 1px solid $color-two;
         }
     }
 
@@ -148,7 +170,7 @@
         width: 13%;
         min-height: 10rem;
         max-height: 10rem;
-        border: 1px solid white;
+        border: 1px solid $color-two;
         text-align: left;
         font-size: 1.5rem;
 
@@ -161,20 +183,22 @@
         }
 
         &__calories {
-            color: $color-three;
+            color: $color-two;
         }
 
         &__weight {
-            color: $color-three;
+            color: $color-two;
         }
     }
 }
 
 .list-view {
-
+    border: 1px solid $color-two;
+    border-radius: 1rem;
+    
     &__ul {
         overflow-y: auto;
-        max-height: 90vh;
+        max-height: 70vh;
     }
 
     &__data {
@@ -204,5 +228,24 @@
             text-align: center;
 
         }
+    }
+}
+
+.add {
+
+    &__form {
+
+        &__header {
+            font-size: 2.5rem;
+        }
+    }
+
+    &__label {
+        font-size: 2rem;
+    }
+
+    &__date {
+        margin: 1rem;
+        font-size: 2rem;
     }
 }

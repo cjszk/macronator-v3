@@ -1,0 +1,16 @@
+.btn {
+    border-radius: 1rem;
+    font-size: 1.75rem;
+    padding: 2rem;
+    border: 1px solid $color-two;
+    margin: 2rem auto;
+    text-align: center;
+    background: none;
+    color: $color-font;
+
+    &:hover {
+        cursor: pointer;
+        background-image: linear-gradient(to right, rgba($color-two, .3), rgba($color-two, .3));
+        color: $color-two;
+    }
+}

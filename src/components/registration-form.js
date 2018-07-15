@@ -1,5 +1,6 @@
 import React from 'react';
 import { Field, reduxForm, focus } from 'redux-form';
+import { Link, Redirect } from 'react-router-dom';
 import { registerUser } from '../actions/register';
 import { login } from '../actions/auth';
 import Input from './input';
@@ -31,6 +32,8 @@ export class RegistrationForm extends React.Component {
                 onSubmit={this.props.handleSubmit(values =>
                     this.onSubmit(values)
                 )}>
+                <h1 className="register__header">Sign Up</h1>
+                <br/>
                 {/* <label className="login-form__label" htmlFor="fullName">Full Name</label>
                 <Field component={Input} type="text" name="fullName" /> */}
                 <span className="login-form__message">{message}</span>
@@ -60,6 +63,9 @@ export class RegistrationForm extends React.Component {
                     disabled={this.props.pristine || this.props.submitting}>
                     Register
                 </button>
+                <Link className="register__back-button" to="/login">
+                    Return to log in
+                </Link>
             </form>
         );
     }

@@ -10,8 +10,8 @@ class ListView extends React.Component {
             return (
                 <li onClick={() => this.props.dispatch(selectDate(data.date))} key={data.id} className="list-view__data">
                     <p className="list-view__data__date">{moment.utc(data.date).format("MMMM Do YYYY")}</p>
-                    <p className="list-view__data__calories">{data.calories} lbs</p>
-                    <p className="list-view__data__weight">{data.weight} kcal</p>
+                    <p className="list-view__data__calories">{data.calories} kcal</p>
+                    <p className="list-view__data__weight">{data.weight} lbs</p>
                 </li>
             )
         })

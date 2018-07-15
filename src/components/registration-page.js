@@ -13,10 +13,6 @@ export function RegistrationPage(props) {
         <section className="register__parent">
             <div className="register">
                 {/* <h1>Register New User</h1> */}
-                    <Link className="register__back-button" to="/login">
-                        Go Back
-                    </Link>
-                    <br/>
                 <RegistrationForm usernameTaken={props.usernameTaken} />
                 <br/>
             </div>

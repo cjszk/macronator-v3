@@ -4,6 +4,9 @@
 @import 'mixins/utils';
 @import 'global';
 
+@import 'components/button';
 @import 'components/nav';
+@import 'components/login';
 @import 'components/dashboard';
 @import 'components/dataEntries';
+@import 'components/settings';
