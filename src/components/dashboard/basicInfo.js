@@ -10,20 +10,22 @@ class BasicInfo extends React.Component {
             const cryptoDateTwo = (parseInt(moment(dayTwo).format('YYYY')) * 365) + parseInt(moment(dayTwo).format('DDD'));
             return cryptoDateOne - cryptoDateTwo
         }
+
         const estimationsArr = [];
+        data.sort((a, b) => {return (parseInt(moment.utc(a.date).format('X')) - parseInt(moment.utc(b.date).format('X')))})
         if (data.length > 30) {
             data.slice(0, 30)
         }
-        data.sort((a, b) => {return (moment.utc(b.date).format('X') > moment.utc(a.date).format('X'))})
+        // data.forEach((data) => console.log(data))
+
         for (let i=1; i<data.length; i++) {
             const weightCaloricFlux = (data[i].weight - data[i-1].weight) * 3500
             const avgCalorieFlux = weightCaloricFlux / relativeTime(data[i].date, data[i-1].date)
             const estimatedTDEE = ((data[i].calories + data[i-1].calories) / 2) + avgCalorieFlux 
+            console.log(data[i-1].date, data[i].date, data[i-1].weight, data[i].weight, estimatedTDEE)
             estimationsArr.push(estimatedTDEE)
         }
         const result = (estimationsArr.reduce((a, b) => a+b)) / estimationsArr.length
-        console.log(data)
-        console.log(result)
         return result
     }
 
