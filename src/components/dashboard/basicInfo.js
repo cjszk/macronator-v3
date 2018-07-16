@@ -19,10 +19,10 @@ class BasicInfo extends React.Component {
         // data.forEach((data) => console.log(data))
 
         for (let i=1; i<data.length; i++) {
-            const weightCaloricFlux = (data[i-1].weight - data[i].weight) * 3500
+            const weightCaloricFlux = (data[i-1].weight - data[i].weight) * 3500;
             const avgCalorieFlux = weightCaloricFlux / relativeTime(data[i].date, data[i-1].date)
-            const estimatedTDEE = ((data[i-1].calories + data[i].calories) / 2) + avgCalorieFlux 
-            console.log(data[i-1], data[i], data[i-1], data[i] )
+            const estimatedTDEE = data[i].calories + avgCalorieFlux
+            
             estimationsArr.push(estimatedTDEE)
         }
         const result = (estimationsArr.reduce((a, b) => a+b)) / estimationsArr.length
