@@ -5,6 +5,9 @@
     flex-direction: row;
     justify-content: space-between;
     padding: 1rem;
+    font-family: 'Audiowide', cursive;
+    position: fixed;
+    z-index: 10;
 
     &__title {
         font-size: 3rem;

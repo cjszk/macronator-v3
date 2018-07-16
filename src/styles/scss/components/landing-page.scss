@@ -1,0 +1,209 @@
+.landing-page {
+    font-family: 'PT Mono', monospace;
+
+    &__cover {
+
+        &__header {
+            font-size: 3rem;
+            position: absolute;
+            left: 70rem;
+            top: 40rem;
+            line-height: 1.5;
+            @include respond(tab-port) {
+                left: 40rem;
+                top: 15rem;
+            }
+            @include respond(phone) {
+                left: 2rem;
+                top: 45rem;
+            }
+
+            &__one {
+                font-size: 5rem;
+            }
+            &__two {
+                margin: 1rem;
+                @include respond(phone) {
+                    margin: 0;
+                }
+            }
+            &__three {
+                margin-left: 2rem;
+                @include respond(phone) {
+                    margin: 0;
+                }
+            }
+        }
+    
+        &__image {
+            width: 100%;
+            max-height: 95vh;
+        }
+        
+    }
+
+    &__about {
+        margin-top: 10rem;
+
+        @include respond(tab-port) {
+            margin-top: 15vh;
+        }
+
+        @include respond(phone) {
+            margin-top: 20vh;
+        }
+
+        &__first {
+            padding: 10rem;
+
+            @media (orientation: portrait) {
+                padding: 10rem 10rem 0rem 10rem;
+            }
+
+            @include respond(phone) {
+                padding: 10rem;
+            }
+
+            &__left {
+                display: inline-block;
+                width: 40%;
+                vertical-align: top;
+                padding: 1rem;
+                @media (orientation: portrait) {
+                    width: 100%;
+                    display: block;
+                    transform: translateY(100%);
+                }
+            }
+
+            &__right {
+                display: inline-block;
+                width: 50%;
+                padding: 1rem;
+                @media (orientation: portrait) {
+                    width: 100%;
+                    display: block;
+                    transform: translateY(-100%);
+                }
+            }
+
+            &__header {
+                font-size: 3rem;
+                margin-bottom: 1rem;
+            }
+
+            &__description {
+                padding-left: 1rem;
+                font-size: 2rem;
+                margin-bottom: 1rem;
+            }
+
+            &__image {
+                width: 100%;
+                border: 1px solid grey;
+            }
+        }
+
+        &__second {
+            padding: 10rem;
+
+            @media (orientation: portrait) {
+                // padding: 0 10rem 10rem 10rem;
+            }
+
+            @include respond(phone) {
+                padding: 10rem 10rem 0rem 10rem;
+            }
+
+            &__left {
+                display: inline-block;
+                width: 50%;
+                vertical-align: top;
+                padding: 1rem;
+
+                @media (orientation: portrait) {
+                    width: 100%;
+                    display: block;
+                }
+            }
+
+            &__right {
+                display: inline-block;
+                width: 40%;
+                padding: 1rem;
+
+                @media (orientation: portrait) {
+                    width: 100%;
+                    display: block;
+                }
+            }
+
+            &__header {
+                font-size: 3rem;
+                margin-bottom: 1rem;
+            }
+
+            &__description {
+                padding-left: 1rem;
+                font-size: 2rem;
+                margin-bottom: 1rem;
+            }
+
+            &__image {
+                width: 100%;
+                border: 1px solid grey;
+            }
+        }
+
+        &__third {
+            padding: 10rem;
+
+            @media (orientation: portrait) {
+                padding: 10rem 10rem 0rem 10rem;
+            }
+
+            @include respond(phone) {
+                padding: 0rem 10rem;
+            }
+
+            &__left {
+                display: inline-block;
+                width: 40%;
+                vertical-align: top;
+                padding: 1rem;
+                @media (orientation: portrait) {
+                    width: 100%;
+                    display: block;
+                    transform: translateY(100%);
+                }
+            }
+
+            &__right {
+                display: inline-block;
+                width: 50%;
+                padding: 1rem;
+                @media (orientation: portrait) {
+                    width: 100%;
+                    display: block;
+                    transform: translateY(-100%);
+                }
+            }
+
+            &__header {
+                font-size: 3rem;
+                margin-bottom: 1rem;
+            }
+
+            &__description {
+                padding-left: 1rem;
+                font-size: 2rem;
+                margin-bottom: 1rem;
+            }
+
+            &__image {
+                width: 100%;
+                border: 1px solid grey;
+            }
+        }
+    }
+}

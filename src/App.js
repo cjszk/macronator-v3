@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Route, withRouter } from 'react-router-dom';
 import Navigation from './components/nav';
 import LandingNavigation from './components/landing-page/landing-page-nav';
+import LandingPage from './components/landing-page/landing-page';
 import Login from './components/login';
 import RegistrationPage from './components/registration-page';
 import Dashboard from './components/dashboard/dashboard';
@@ -22,6 +23,7 @@ class App extends Component {
         <Route exact path="/login" component={LandingNavigation} />
         <Route exact path="/registration" component={LandingNavigation} />
 
+        <Route exact path="/" component={LandingPage} />
         <Route exact path="/login" component={Login} />
         <Route exact path="/registration" component={RegistrationPage} />
         <Route exact path="/dashboard" component={Dashboard} />

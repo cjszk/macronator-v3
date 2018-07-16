@@ -6,6 +6,7 @@
     top: 0;
     left: 0;
     z-index: -1;
+    font-family: 'Audiowide', cursive;
 
     @include respond(phone) {
         overflow-x: hidden;
@@ -89,7 +90,7 @@
 }
 
 .basic-info {
-    font-size: 2.5rem;
+    font-size: 2.0rem;
     border: 2px solid $color-two;
     border-radius: 1rem;
     margin: 0 auto;
@@ -235,4 +236,8 @@
 .recharts-default-tooltip {
     background-color: $color-one !important;
     font-size: 1.5rem !important; 
+}
+
+g {
+    font-family: sans-serif;
 }

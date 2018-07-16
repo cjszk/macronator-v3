@@ -6,6 +6,7 @@
     top: 0;
     left: 0;
     z-index: -1;
+    font-family: 'Audiowide', cursive;
 
     &__overlay {
         background-image: linear-gradient(to right, rgba($color-one, .6), rgba($color-one, .6));
@@ -67,6 +68,7 @@
             border-radius: 1rem;
             background: none;
             color: $color-font;
+            font-family: 'Audiowide', cursive;
 
             &:hover {
                 cursor: pointer;

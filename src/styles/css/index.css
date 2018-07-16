@@ -83,6 +83,152 @@ input {
   color: #999;
   border: 1px solid #062F4F; }
 
+.landing-page {
+  font-family: 'PT Mono', monospace; }
+  .landing-page__cover__header {
+    font-size: 3rem;
+    position: absolute;
+    left: 70rem;
+    top: 40rem;
+    line-height: 1.5; }
+    @media (max-width: 60em) {
+      .landing-page__cover__header {
+        left: 40rem;
+        top: 15rem; } }
+    @media (max-width: 40em) {
+      .landing-page__cover__header {
+        left: 2rem;
+        top: 45rem; } }
+    .landing-page__cover__header__one {
+      font-size: 5rem; }
+    .landing-page__cover__header__two {
+      margin: 1rem; }
+      @media (max-width: 40em) {
+        .landing-page__cover__header__two {
+          margin: 0; } }
+    .landing-page__cover__header__three {
+      margin-left: 2rem; }
+      @media (max-width: 40em) {
+        .landing-page__cover__header__three {
+          margin: 0; } }
+  .landing-page__cover__image {
+    width: 100%;
+    max-height: 95vh; }
+  .landing-page__about {
+    margin-top: 10rem; }
+    @media (max-width: 60em) {
+      .landing-page__about {
+        margin-top: 15vh; } }
+    @media (max-width: 40em) {
+      .landing-page__about {
+        margin-top: 20vh; } }
+    .landing-page__about__first {
+      padding: 10rem; }
+      @media (orientation: portrait) {
+        .landing-page__about__first {
+          padding: 10rem 10rem 0rem 10rem; } }
+      @media (max-width: 40em) {
+        .landing-page__about__first {
+          padding: 10rem; } }
+      .landing-page__about__first__left {
+        display: inline-block;
+        width: 40%;
+        vertical-align: top;
+        padding: 1rem; }
+        @media (orientation: portrait) {
+          .landing-page__about__first__left {
+            width: 100%;
+            display: block;
+            transform: translateY(100%); } }
+      .landing-page__about__first__right {
+        display: inline-block;
+        width: 50%;
+        padding: 1rem; }
+        @media (orientation: portrait) {
+          .landing-page__about__first__right {
+            width: 100%;
+            display: block;
+            transform: translateY(-100%); } }
+      .landing-page__about__first__header {
+        font-size: 3rem;
+        margin-bottom: 1rem; }
+      .landing-page__about__first__description {
+        padding-left: 1rem;
+        font-size: 2rem;
+        margin-bottom: 1rem; }
+      .landing-page__about__first__image {
+        width: 100%;
+        border: 1px solid grey; }
+    .landing-page__about__second {
+      padding: 10rem; }
+      @media (max-width: 40em) {
+        .landing-page__about__second {
+          padding: 10rem 10rem 0rem 10rem; } }
+      .landing-page__about__second__left {
+        display: inline-block;
+        width: 50%;
+        vertical-align: top;
+        padding: 1rem; }
+        @media (orientation: portrait) {
+          .landing-page__about__second__left {
+            width: 100%;
+            display: block; } }
+      .landing-page__about__second__right {
+        display: inline-block;
+        width: 40%;
+        padding: 1rem; }
+        @media (orientation: portrait) {
+          .landing-page__about__second__right {
+            width: 100%;
+            display: block; } }
+      .landing-page__about__second__header {
+        font-size: 3rem;
+        margin-bottom: 1rem; }
+      .landing-page__about__second__description {
+        padding-left: 1rem;
+        font-size: 2rem;
+        margin-bottom: 1rem; }
+      .landing-page__about__second__image {
+        width: 100%;
+        border: 1px solid grey; }
+    .landing-page__about__third {
+      padding: 10rem; }
+      @media (orientation: portrait) {
+        .landing-page__about__third {
+          padding: 10rem 10rem 0rem 10rem; } }
+      @media (max-width: 40em) {
+        .landing-page__about__third {
+          padding: 0rem 10rem; } }
+      .landing-page__about__third__left {
+        display: inline-block;
+        width: 40%;
+        vertical-align: top;
+        padding: 1rem; }
+        @media (orientation: portrait) {
+          .landing-page__about__third__left {
+            width: 100%;
+            display: block;
+            transform: translateY(100%); } }
+      .landing-page__about__third__right {
+        display: inline-block;
+        width: 50%;
+        padding: 1rem; }
+        @media (orientation: portrait) {
+          .landing-page__about__third__right {
+            width: 100%;
+            display: block;
+            transform: translateY(-100%); } }
+      .landing-page__about__third__header {
+        font-size: 3rem;
+        margin-bottom: 1rem; }
+      .landing-page__about__third__description {
+        padding-left: 1rem;
+        font-size: 2rem;
+        margin-bottom: 1rem; }
+      .landing-page__about__third__image {
+        width: 100%;
+        border: 1px solid grey; }
+
 .btn {
   border-radius: 1rem;
   font-size: 1.75rem;
@@ -103,7 +249,10 @@ input {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 1rem; }
+  padding: 1rem;
+  font-family: 'Audiowide', cursive;
+  position: fixed;
+  z-index: 10; }
   .navigation__title {
     font-size: 3rem;
     display: inline-block; }
@@ -232,7 +381,8 @@ input {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: -1; }
+  z-index: -1;
+  font-family: 'Audiowide', cursive; }
   @media (max-width: 40em) {
     .dashboard {
       overflow-x: hidden; } }
@@ -298,7 +448,7 @@ input {
           margin: 5rem 2rem 5rem 10rem; }
 
 .basic-info {
-  font-size: 2.5rem;
+  font-size: 2.0rem;
   border: 2px solid #062F4F;
   border-radius: 1rem;
   margin: 0 auto;
@@ -395,6 +545,9 @@ input {
   background-color: #000000 !important;
   font-size: 1.5rem !important; }
 
+g {
+  font-family: sans-serif; }
+
 .data-entries {
   background: url("../images/dashboard-background.png");
   height: 100vh;
@@ -402,7 +555,8 @@ input {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: -1; }
+  z-index: -1;
+  font-family: 'Audiowide', cursive; }
   .data-entries__overlay {
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
     height: 100vh;
@@ -516,7 +670,7 @@ input {
       color: #062F4F; }
       @media (max-width: 60em) {
         .calendar__block__calories {
-          font-size: 1.2rem;
+          font-size: 1.0rem;
           color: #999; } }
       @media (max-width: 40em) {
         .calendar__block__calories {
@@ -574,7 +728,8 @@ input {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: -1; }
+  z-index: -1;
+  font-family: 'Audiowide', cursive; }
   .settings__overlay {
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
     height: 100vh;
@@ -622,7 +777,8 @@ input {
       margin: 1rem .5rem;
       border-radius: 1rem;
       background: none;
-      color: #999; }
+      color: #999;
+      font-family: 'Audiowide', cursive; }
       .settings__options__button:hover {
         cursor: pointer;
         background-image: linear-gradient(to right, rgba(6, 47, 79, 0.3), rgba(6, 47, 79, 0.3));
