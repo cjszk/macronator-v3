@@ -7,6 +7,7 @@ import RegistrationPage from './components/registration-page';
 import Dashboard from './components/dashboard/dashboard';
 import DataEntries from './components/dataEntries/dataEntries';
 import Settings from './components/settings/settings';
+import Setup from './components/settings/setup';
 
 class App extends Component {
   render() {
@@ -26,7 +27,7 @@ class App extends Component {
         <Route exact path="/dashboard" component={Dashboard} />
         <Route exact path="/data-entries" component={DataEntries} />
         <Route exact path="/settings" component={Settings} />
-
+        <Route exact path="/setup" component={Setup} />
 
       </div>
     );

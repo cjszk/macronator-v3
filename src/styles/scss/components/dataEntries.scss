@@ -184,10 +184,26 @@
 
         &__calories {
             color: $color-two;
+            @include respond(tab-port) {
+                font-size: 1.2rem;
+                color: $color-font;
+            }
+            @include respond(phone) {
+                font-size: 0rem;
+                visibility: hidden;
+            }
         }
 
         &__weight {
             color: $color-two;
+            @include respond(tab-port) {
+                font-size: 1.2rem;
+                color: $color-font;
+            }
+            @include respond(phone) {
+                font-size: 0rem;
+                visibility: hidden;
+            }
         }
     }
 }

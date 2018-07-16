@@ -27,6 +27,10 @@
         font-size: 2rem;
         border: 1px solid $color-two;
         border-radius: 1rem;
+
+        @include respond(phone) {
+            width: 50%;
+        }
     }
 
     &__right {
@@ -99,7 +103,7 @@
             }
 
             &__description {
-                padding: 0 30rem 0 0;
+                
             }
         }
 

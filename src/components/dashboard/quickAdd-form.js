@@ -50,7 +50,6 @@ export class QuickAddForm extends React.Component {
                 </div>
             );
         }
-        console.log(this.state)
         return (
             <form
                 className="quick-add__form"

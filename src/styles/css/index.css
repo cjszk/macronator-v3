@@ -113,6 +113,9 @@ input {
     display: inline-block;
     font-size: 2rem;
     margin: .5rem 2rem; }
+    @media (max-width: 40em) {
+      .navigation__li {
+        margin: .5rem 0; } }
     .navigation__li__button {
       cursor: pointer;
       position: relative;
@@ -123,7 +126,8 @@ input {
       font-size: 2rem; }
       @media (max-width: 40em) {
         .navigation__li__button {
-          padding: 1rem; } }
+          padding: .5rem;
+          font-size: 1.5rem; } }
       .navigation__li__button:hover {
         color: #062F4F; }
       .navigation__li__button:before {
@@ -229,6 +233,9 @@ input {
   top: 0;
   left: 0;
   z-index: -1; }
+  @media (max-width: 40em) {
+    .dashboard {
+      overflow-x: hidden; } }
   .dashboard__overlay {
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
     height: 100vh;
@@ -240,6 +247,15 @@ input {
     width: 100%;
     margin: 10rem auto;
     display: flex; }
+    @media (max-width: 60em) {
+      .dashboard__content {
+        display: block;
+        position: absolute;
+        max-height: 100vh;
+        overflow-y: hidden;
+        top: 0;
+        left: 0;
+        margin: 0 auto; } }
     .dashboard__content__left {
       margin: 1rem 0rem 1rem 5rem;
       width: 30%;
@@ -247,12 +263,30 @@ input {
       display: flex;
       flex-direction: column;
       justify-content: space-between; }
+      @media (max-width: 60em) {
+        .dashboard__content__left {
+          display: block;
+          margin: 0 auto;
+          width: 100%; } }
+      @media (max-width: 40em) {
+        .dashboard__content__left {
+          margin: 0rem; } }
     .dashboard__content__right {
       margin: 1rem 10rem 1rem 0rem;
       width: 70%;
       height: 60rem;
       border: 2px solid #062F4F;
       border-radius: 1rem; }
+      @media (max-width: 60em) {
+        .dashboard__content__right {
+          width: 100%;
+          margin: 0rem 0rem 0rem 0rem; } }
+      @media (max-width: 40em) {
+        .dashboard__content__right {
+          visibility: hidden;
+          position: absolute;
+          left: -1000rem;
+          top: 0rem; } }
       .dashboard__content__right__graph-container {
         margin-top: 5rem; }
       .dashboard__content__right__graph-input {
@@ -269,6 +303,16 @@ input {
   border-radius: 1rem;
   margin: 0 auto;
   padding: 0 1.5rem; }
+  @media (max-width: 60em) {
+    .basic-info {
+      margin: 20rem 0rem 0rem 10rem;
+      display: inline-block;
+      vertical-align: top; } }
+  @media (max-width: 40em) {
+    .basic-info {
+      position: absolute;
+      top: -5rem;
+      left: -10rem; } }
   .basic-info__ul {
     display: flex;
     flex-direction: column;
@@ -282,6 +326,8 @@ input {
     .basic-info__goal__info {
       display: inline-block;
       padding: 1rem; }
+    .basic-info__goal__message {
+      font-size: 2rem; }
   .basic-info__tdee {
     margin: 0 auto; }
     .basic-info__tdee__label {
@@ -298,6 +344,16 @@ input {
   margin: 0 auto;
   border: 2px solid #062F4F;
   border-radius: 1rem; }
+  @media (max-width: 60em) {
+    .quick-add {
+      margin: 10rem 5rem;
+      display: inline-block;
+      height: 45rem; } }
+  @media (max-width: 40em) {
+    .quick-add {
+      position: absolute;
+      top: 0rem;
+      right: -5rem; } }
   .quick-add__header {
     font-size: 2rem; }
   .quick-add__form {
@@ -458,8 +514,24 @@ input {
       font-size: 2rem; }
     .calendar__block__calories {
       color: #062F4F; }
+      @media (max-width: 60em) {
+        .calendar__block__calories {
+          font-size: 1.2rem;
+          color: #999; } }
+      @media (max-width: 40em) {
+        .calendar__block__calories {
+          font-size: 0rem;
+          visibility: hidden; } }
     .calendar__block__weight {
       color: #062F4F; }
+      @media (max-width: 60em) {
+        .calendar__block__weight {
+          font-size: 1.2rem;
+          color: #999; } }
+      @media (max-width: 40em) {
+        .calendar__block__weight {
+          font-size: 0rem;
+          visibility: hidden; } }
 
 .list-view {
   border: 1px solid #062F4F;
@@ -521,6 +593,9 @@ input {
     font-size: 2rem;
     border: 1px solid #062F4F;
     border-radius: 1rem; }
+    @media (max-width: 40em) {
+      .settings__left {
+        width: 50%; } }
   .settings__right {
     height: 50vh;
     margin: 15rem 3rem;
@@ -568,8 +643,6 @@ input {
       color: #999;
       border: 1px solid #062F4F;
       margin-bottom: 2rem; }
-    .settings__options__change-goals__description {
-      padding: 0 30rem 0 0; }
     .settings__options__change-password__header {
       font-size: 3rem;
       margin-bottom: 2rem; }

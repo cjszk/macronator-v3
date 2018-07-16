@@ -71,7 +71,7 @@ class Settings extends React.Component {
             options = (
                 <div className="settings__options__change-password">
                     <h2 className="settings__options__change-password__header">Change Password</h2>
-                    <ChangePassword authToken={this.props.authToken} userId={this.props.currentUser.id}/>
+                    <ChangePassword username={this.props.currentUser.username} authToken={this.props.authToken} userId={this.props.currentUser.id}/>
                     <p className="settings__options__change-password__description">Change the password to your account.</p>
                 </div>
             )

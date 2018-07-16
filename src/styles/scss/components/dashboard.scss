@@ -7,6 +7,10 @@
     left: 0;
     z-index: -1;
 
+    @include respond(phone) {
+        overflow-x: hidden;
+    }
+
     &__overlay {
         background-image: linear-gradient(to right, rgba($color-one, .6), rgba($color-one, .6));
         height: 100vh;
@@ -20,6 +24,15 @@
         width: 100%;
         margin: 10rem auto;
         display: flex;
+        @include respond(tab-port) {
+            display: block;
+            position: absolute;
+            max-height: 100vh;
+            overflow-y: hidden;
+            top: 0;
+            left: 0;
+            margin: 0 auto;
+        }
 
         &__left {
             margin: 1rem 0rem 1rem 5rem;
@@ -28,6 +41,15 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            
+            @include respond(tab-port) {
+                display: block;
+                margin: 0 auto;
+                width: 100%;
+            }
+            @include respond(phone) {
+                margin: 0rem;
+            }
         }
     
         &__right {
@@ -36,6 +58,17 @@
             height: 60rem;
             border: 2px solid $color-two;
             border-radius: 1rem;
+
+            @include respond(tab-port) {
+                width: 100%;
+                margin: 0rem 0rem 0rem 0rem;
+            }
+            @include respond(phone) {
+                visibility: hidden;
+                position: absolute;
+                left: -1000rem;
+                top: 0rem;
+            }
 
             &__graph-container {
                 margin-top: 5rem;
@@ -52,7 +85,7 @@
                 }
             }
         }
-    }
+    } 
 }
 
 .basic-info {
@@ -61,6 +94,18 @@
     border-radius: 1rem;
     margin: 0 auto;
     padding: 0 1.5rem;
+
+    @include respond(tab-port) {
+        margin: 20rem 0rem 0rem 10rem;
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    @include respond(phone) {
+        position: absolute;
+        top: -5rem;
+        left: -10rem;
+    }
 
     &__ul {
         display: flex;
@@ -81,6 +126,10 @@
         &__info {
             display: inline-block;
             padding: 1rem;
+        }
+
+        &__message {
+            font-size: 2rem;
         }
     }
 
@@ -109,6 +158,16 @@
     margin: 0 auto;
     border: 2px solid $color-two;
     border-radius: 1rem;
+    @include respond(tab-port) {
+        margin: 10rem 5rem;
+        display: inline-block;
+        height: 45rem;
+    }
+    @include respond(phone) {
+        position: absolute;
+        top: 0rem;
+        right: -5rem;
+    }
 
     &__header {
         font-size: 2rem;
