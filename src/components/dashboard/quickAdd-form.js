@@ -29,6 +29,15 @@ export class QuickAddForm extends React.Component {
             return
         }
 
+        if (values.calories > 10000) {
+            alert('There is no way you ate that much (unless you won an eating contest). Please choose an appropriate value.')
+            return
+        } 
+        if (values.weight > 980) {
+            alert('There is no way that you weigh more than the heaviest man ever recorded in history.')
+            return
+        } 
+
         const newData = {
             calories: values.calories,
             weight: values.weight,
