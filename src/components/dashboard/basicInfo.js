@@ -14,7 +14,7 @@ class BasicInfo extends React.Component {
         if (data.length > 30) {
             data.slice(0, 30)
         }
-        data.sort((a, b) => {return (moment.utc(b.date).format('X') < moment.utc(a.date).format('X'))})
+        data.sort((a, b) => {return (moment.utc(b.date).format('X') > moment.utc(a.date).format('X'))})
         for (let i=1; i<data.length; i++) {
             const weightCaloricFlux = (data[i].weight - data[i-1].weight) * 3500
             const avgCalorieFlux = weightCaloricFlux / relativeTime(data[i].date, data[i-1].date)
@@ -22,11 +22,14 @@ class BasicInfo extends React.Component {
             estimationsArr.push(estimatedTDEE)
         }
         const result = (estimationsArr.reduce((a, b) => a+b)) / estimationsArr.length
+        console.log(data)
+        console.log(result)
         return result
     }
 
     render() {
         try {
+            const TDEE = this.calculateTDEE(this.props.currentUser.data);
             let factor = 1;
             if (this.props.currentUser.goal === 'Cut') {
                 factor = .8
@@ -42,11 +45,11 @@ class BasicInfo extends React.Component {
                         </li>
                         <li className="basic-info__tdee">
                             <p className="basic-info__tdee__label">Est. TDEE:</p>
-                            <p className="basic-info__tdee__info">{Math.round(this.calculateTDEE(this.props.currentUser.data))}</p>
+                            <p className="basic-info__tdee__info">{Math.round(TDEE)}</p>
                         </li>
                         <li className="basic-info__recommended">
                             <p className="basic-info__tdee__label">Recommended:</p>
-                            <p className="basic-info__tdee__info">{Math.round(this.calculateTDEE(this.props.currentUser.data) * factor)}</p>
+                            <p className="basic-info__tdee__info">{Math.round(TDEE * factor)}</p>
                         </li>
                     </ul>
                 </div>
