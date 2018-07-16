@@ -60,6 +60,7 @@
     border: 2px solid $color-two;
     border-radius: 1rem;
     margin: 0 auto;
+    padding: 0 1.5rem;
 
     &__ul {
         display: flex;
@@ -129,6 +130,7 @@
 
     &__input {
         font-size: 2rem;
+        padding: 1rem .5rem;
     }
 
     &__button {

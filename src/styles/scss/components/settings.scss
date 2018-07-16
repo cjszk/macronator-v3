@@ -14,18 +14,31 @@
         position: absolute;
         left: 0;
         top: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
     }
 
     &__left {
         height: 50vh;
-        margin: 20rem 10rem;
-        width: 30%;
+        margin: 15rem 3rem;
+        width: 25%;
         padding: 5rem;
         font-size: 2rem;
         border: 1px solid $color-two;
         border-radius: 1rem;
     }
-    
+
+    &__right {
+        height: 50vh;
+        margin: 15rem 3rem;
+        width: 50%;
+        padding: 5rem;
+        font-size: 2rem;
+        border: 1px solid $color-two;
+        border-radius: 1rem;
+    }
+
     &__options {
         display: flex;
         flex-direction: column;
@@ -66,9 +79,63 @@
                 }
             }
         }
-    }
 
-    &__right {
+        &__change-goals {
 
+            &__header {
+                font-size: 3rem;
+                margin-bottom: 2rem;
+            }
+
+            &__select {
+                padding: 1rem;
+                width: 20rem;
+                font-size: 2rem;
+                background-color: $color-one;
+                color: $color-font;
+                border: 1px solid $color-two;
+                margin-bottom: 2rem;
+
+            }
+
+            &__description {
+                padding: 0 30rem 0 0;
+            }
+        }
+
+        &__change-password {
+
+            &__header {
+                font-size: 3rem;
+                margin-bottom: 2rem;
+            }
+
+            &__form {
+
+            }
+
+            &__label {
+
+            }
+
+            &__input {
+                padding: 1rem;
+                width: 20rem;
+                font-size: 2rem;
+                background-color: $color-one;
+                color: $color-font;
+                border: 1px solid $color-two;
+                margin-bottom: 1rem;
+            }
+
+            &__button {
+                width: 20rem;
+                padding: 1.5rem;
+            }
+
+            &__description {
+
+            }
+        }
     }
 }

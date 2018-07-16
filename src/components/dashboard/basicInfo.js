@@ -27,7 +27,7 @@ class BasicInfo extends React.Component {
             let factor = 1;
             if (this.props.currentUser.goal === 'Cut') {
                 factor = .8
-            } else if (this.props.currentUser.goal === 'Bulk') {
+            } else if (this.props.currentUser.goal === 'Gain') {
                 factor = 1.075
             }
             return (

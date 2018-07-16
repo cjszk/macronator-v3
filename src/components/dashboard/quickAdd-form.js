@@ -42,6 +42,7 @@ export class QuickAddForm extends React.Component {
 
     render() {
         let error;
+        const component = this;
         if (this.props.error) {
             error = (
                 <div className="form-error" aria-live="polite">
@@ -49,6 +50,7 @@ export class QuickAddForm extends React.Component {
                 </div>
             );
         }
+        console.log(this.state)
         return (
             <form
                 className="quick-add__form"

@@ -169,3 +169,31 @@ export const changePassword = (authToken, password, userId) => (dispatch) => {
     })
 
 }
+
+export const changeGoal = (authToken, userInfo, userId) => (dispatch) => {
+
+    const updateObject = {
+        username: userInfo.username,
+        data: userInfo.data,
+        goal: userInfo.goal
+    }
+    fetch(`${API_BASE_URL}/change-goal/${userId}`, {
+        method: 'PUT', 
+        body: JSON.stringify(updateObject),
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+            Authorization: `Bearer ${authToken}`
+            }
+    })
+    .then((res) => {
+        res.json()
+    })
+    .then(() => {
+        dispatch(getUserInfoById(authToken, userId))
+        alert('Goal has been updated!')
+    })
+    .catch((result) => {
+        console.error(result)
+    })
+}

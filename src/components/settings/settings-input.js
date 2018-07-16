@@ -32,12 +32,11 @@ export default class Input extends React.Component {
                     {warning}
                 </label>
                 <input
-                    className="quick-add__input"  
+                    className="settings__options__change-password__input"  
                     {...this.props.input}
                     id={this.props.input.name}
                     type={this.props.type}
                     ref={input => (this.input = input)}
-                    defaultValue={this.props.value}
                 />
             </div>
         );

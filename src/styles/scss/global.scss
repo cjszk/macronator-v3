@@ -75,3 +75,9 @@ svg {
     text-align: center;
     vertical-align: center;
 }
+
+input {
+    background-color: $color-one;
+    color: $color-font;
+    border: 1px solid $color-two;
+}
