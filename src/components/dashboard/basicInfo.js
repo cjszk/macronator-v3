@@ -11,7 +11,10 @@ class BasicInfo extends React.Component {
             return cryptoDateOne - cryptoDateTwo
         }
         const estimationsArr = [];
-    
+        if (data.length > 30) {
+            data.slice(0, 30)
+        }
+        data.sort((a, b) => {return (moment.utc(b.date).format('X') < moment.utc(a.date).format('X'))})
         for (let i=1; i<data.length; i++) {
             const weightCaloricFlux = (data[i].weight - data[i-1].weight) * 3500
             const avgCalorieFlux = weightCaloricFlux / relativeTime(data[i].date, data[i-1].date)
