@@ -41,7 +41,7 @@ class LandingNavigation extends React.Component {
                     <h2 className="landing-page__cover__header">
                         <span className="landing-page__cover__header__one">Find your true caloric requirements.</span>
                         <br/>
-                        <span className="landing-page__cover__header__two">No estimations from calculators.</span>
+                        <span className="landing-page__cover__header__two">No estimations from so-called 'calculators.'</span>
                         <br/>
                         <span className="landing-page__cover__header__three">Just real calculations personalized from your own data.</span>
                     </h2>
